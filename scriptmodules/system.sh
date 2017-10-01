@@ -33,11 +33,11 @@ function setup_env() {
         set_default_gcc "$__default_gcc_version"
     fi
 
-    # set location of binary downloads
-    __binary_host="files.retroevolved.org.uk"
+    # set location of binary downloads to retropie.org
+    __binary_host="files.retropie.org.uk"
     [[ "$__has_binaries" -eq 1 ]] && __binary_url="https://$__binary_host/binaries/$__os_codename/$__platform"
 
-    __archive_url="https://files.retroevolved.org.uk/archives"
+    __archive_url="https://files.retropie.org.uk/archives"
 
     # -pipe is faster but will use more memory - so let's only add it if we have more thans 256M free ram.
     [[ $__memory_phys -ge 512 ]] && __default_cflags+=" -pipe"
