@@ -44,7 +44,6 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
-        'RetroEvolved'
         'RetroPie carbon'
         'RetroPie carbon-centered'
         'RetroPie carbon-nometa'
