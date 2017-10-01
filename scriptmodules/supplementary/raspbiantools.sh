@@ -58,7 +58,7 @@ function gui_raspbiantools() {
     while true; do
         local cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option" 22 76 16)
         local options=(
-            1 "Upgrade Raspbian packages"
+            1 "Upgrade Raspbian packages (Please Backup Before Attemping This)"
             2 "Install Pixel desktop environment"
             3 "Remove some uneeded packages (pulseaudio / cups / wolfram)"
             4 "Disable screen blanker"
