@@ -4,7 +4,7 @@ RetroEvolved-Setup
 Disclaimer
 ------------
 
-The RetroEvolved Setup Script is a derivitave reworking of the "RetroPie" setup script (Found Here: https://github.com/RetroPie/RetroPie-Setup) with minor changes made to remove all non-commercial licensed code, trademarked images and provide a medium for developers and resellers to sell their hardware preinstalled with this code without fear of legal repercussion. All references to "RetroPie" have thus been replaced with "RetroEvolved" to distinguish this project from it's original source. This code is licensed under the same licenses as the original source "RetroPie" which is the GNU GPL version stated below in the License section. "RetroEvolved" was created to distinguish itself completely from RetroPie but in no way is attempting to take credit for the hard work of the RetroPie team!
+The RetroEvolved Setup Script is a derivitave reworking of the "RetroPie" setup script (Found Here: https://github.com/RetroPie/RetroPie-Setup) with minor changes made to remove all non-commercial licensed code, trademarked images and provide a medium for developers and resellers to sell their hardware preinstalled with this code without fear of legal repercussion. All references to "RetroPie" have thus been replaced with "RetroEvolved" to distinguish this project from it's original source. This code is licensed under the same licenses as the original source "RetroPie" which is the GNU GPL version stated below in the License section. "RetroEvolved" was created to distinguish itself completely from RetroPie but in no way is attempting to take credit for the hard work of the RetroPie team! Only commercially usable emulators, etc. are allowed to be pre-built onto a distributable image, but all non-commercial emulators can be downloaded by the end-user by utilizing this setup script.
 
 License
 -------------
@@ -53,6 +53,6 @@ For more information visit the blog at https://RetroGame.Club/blogs/Tutorials or
 Thanks
 ------
 
-Without Retro Game Emulators and EmulationStation culminating from the hard work of hundreds of developers, this project would not be possible. Only commercially usable emulators will be pre-built with this package, but all non-commercial emulators can be downloaded by the end-user by utilizing this setup script. EmulationStation is the incredible front-end to this project which allows us to use custom themes and integrate the emulator packages mentioned above.
+Without Retro Game Emulators and EmulationStation culminating from the hard work of hundreds of developers, this project would not be possible. EmulationStation is the incredible front-end to this project which allows us to use custom themes and integrate the emulator packages mentioned above.
 
 Again we would like to mention that this script is entirely based off the hard work of the RetroPie team and many thanks go out to them for creating such a powerful script! Please note that our aim with the RetroEvolved project is not to take any due credit away from the RetroPie team, but rather make their script accessable to developers who desire to sell hardware preinstalled with this code as this is one of the great joys of the GNU GPL!
