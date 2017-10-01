@@ -36,6 +36,7 @@ git clone --depth=1 https://github.com/RetroEvolved/RetroEvolved-Setup.git
 The script is executed with 
 
 ```shell
+chmod u+x **/*.sh
 cd RetroEvolved-Setup
 sudo ./retroevolved_setup.sh
 ```
