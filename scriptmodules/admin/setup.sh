@@ -2,7 +2,7 @@
 
 # This file is part of The RetroEvolved Project
 #
-# The RetroEvolved Project is the legal property of its developers, whose names are
+# The RetroEvolved Project is a derivative reworking of The RetroPie Project. The RetroPie Project is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 # See the LICENSE.md file at the top-level directory of this distribution and
@@ -124,7 +124,7 @@ function post_update_setup() {
     } &> >(tee >(gzip --stdout >"$logfilename"))
     rps_printInfo "$logfilename"
 
-    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://retroevolved.org.uk.\n\nThe pre-built RetroEvolved image includes software that has non commercial licences. Selling RetroEvolved images or including RetroEvolved with your commercial product is not allowed.\n\nNo copyrighted games are included with RetroEvolved.\n\nIf you have been sold this software, you can let us know about it by emailing retroevolvedproject@gmail.com."
+    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://RetroGame.Club/pages/RetroEvolved.\n\nThe pre-built RetroEvolved image does not contain any software with non commercial licences. Therefore selling RetroEvolved images or including RetroEvolved with your commercial product is allowed!\n\nNo copyrighted games are included with RetroEvolved.\n\nIf you have been sold this software by a source other than RetroGame.Club, please let us know about it so we can add it to our website as an official distributer by emailing Support@RetroGame.Club."
 
     # return to set return function
     "${return_func[@]}"
@@ -400,7 +400,7 @@ function update_packages_gui_setup() {
     fi
 
     local update_os=0
-    dialog --yesno "Would you like to update the underlying OS packages (eg kernel etc) ?" 22 76 2>&1 >/dev/tty && update_os=1
+    dialog --yesno "Would you like to update the underlying OS packages (eg kernel etc) ? NOTE as of 10/1/2017 Raspbian Stretch is not supported by RetroEvolved. It may be wise to hold off on updating these packages as it could brick your console! Please make a backup of your console before proceeding." 22 76 2>&1 >/dev/tty && update_os=1
 
     clear
 
