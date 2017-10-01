@@ -10,9 +10,9 @@
 #
 
 rp_module_id="retroevolved-manager"
-rp_module_desc="Web Based Manager for RetroEvolved files and configs based on the Recalbox Manager"
+rp_module_desc="Web Based Manager originally designed for RetroPie files and configs based on the Recalbox Manager"
 rp_module_help="Open your browser and go to http://your_retroevolved_ip:8000/"
-rp_module_licence="MIT https://raw.githubusercontent.com/botolo78/RetroEvolved-Manager/retroevolved/ORIGINAL%20LICENCE.txt"
+rp_module_licence="MIT https://raw.githubusercontent.com/botolo78/RetroPie-Manager/retropie/ORIGINAL%20LICENCE.txt"
 rp_module_section="exp"
 rp_module_flags="noinstclean"
 
@@ -22,7 +22,7 @@ function depends_retroevolved-manager() {
 }
 
 function sources_retroevolved-manager() {
-    gitPullOrClone "$md_inst" "https://github.com/botolo78/RetroEvolved-Manager.git"
+    gitPullOrClone "$md_inst" "https://github.com/botolo78/RetroPie-Manager.git"
 }
 
 function install_retroevolved-manager() {
