@@ -49,7 +49,7 @@ if [[ "$(id -u)" -ne 0 ]]; then
     exit 1
 fi
 
-__backtitle="retrogame.club - RetroEvolved Setup. Installation folder: $rootdir for user $user"
+__backtitle="RetroGame.club - RetroEvolved Setup. Installation folder: $rootdir for user $user"
 
 source "$scriptdir/scriptmodules/system.sh"
 source "$scriptdir/scriptmodules/helpers.sh"
