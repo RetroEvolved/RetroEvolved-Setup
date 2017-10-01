@@ -69,19 +69,19 @@ function retroevolved_welcome() {
     local bfgpur="${bld}$(tput setaf 5)"
     local bfgcyn="${bld}$(tput setaf 6)"
     local bfgwht="${bld}$(tput setaf 7)"
-
+    
     local logo=(
-        "${fgred}   .***.   "
-        "${fgred}   ***${bfgwht}*${fgred}*   "
-        "${fgred}   \`***'   "
-        "${bfgwht}    |*|    "
-        "${bfgwht}    |*|    "
-        "${bfgred}  ..${bfgwht}|*|${bfgred}..  "
-        "${bfgred}.*** ${bfgwht}*${bfgred} ***."
-        "${bfgred}*******${fggrn}@@${bfgred}**"
-        "${fgred}\`*${bfgred}****${bfgylw}@@${bfgred}*${fgred}*'"
-        "${fgred} \`*******'${fgrst} "
-        "${fgred}   \`\"\"\"'${fgrst}   "
+        "${fgred}________________________________________________"
+        "${fgred}\ ______   \_   _____\__    ___\______   \_____  \"
+        "${fgred}  |       _/|    __)_  |    |   |       _//   |   \"
+        "${fgred}  |    |   \|        \ |    |   |    |   /    |    \"
+        "${fgred}  |____|_  /_______  / |____|   |____|_  \_______  /"
+        "${bfgred}______________   ___________  .____ ____   _____________________"
+        "${bfgred}\_   _____\   \ /   \_____  \ |    |\   \ /   \_   _____\______ \"
+        "${bfgred} |    __)_ \   Y   / /   |   \|    | \   Y   / |    __)_ |    |  \"
+        "${bfgred} |        \ \     / /    |    |    |__\     /  |        \|    `   \"
+        "${bfgred}/_______  /  \___/  \_______  |_______ \___/  /_______  /_______  /"
+        "${bfgred}        \/                  \/        \/              \/        \/"
         )
 
     local out
@@ -117,7 +117,7 @@ function retroevolved_welcome() {
                 out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F"
                 ;;
             10)
-                out+="${fgwht}The RetroEvolved Project, https://retroevolved.org.uk"
+                out+="${fgwht}The RetroEvolved Project, https://retrogame.club/pages/retroevolved"
                 ;;
         esac
         out+="\n"
