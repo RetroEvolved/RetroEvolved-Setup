@@ -4,7 +4,7 @@ RetroEvolved-Setup
 Disclaimer
 ------------
 
-The RetroEvolved Setup Script is a derivitave reworking of the "RetroPie" setup script (Found Here: https://github.com/RetroPie/RetroPie-Setup) with minor changes made to remove all non-commercial licensed code, trademarked images and provide a medium for developers and resellers to sell their hardware preinstalled with this code without fear of legal repercussion. All references to "RetroPie" have thus been replaced with "RetroEvolved" to distinguish this project from it's original source. This code is licensed under the same licenses as the original source "RetroPie" which is the GNU GPL version stated above. "RetroEvolved" was created to distinguish itself completely from RetroPie but in no way is attempting to take credit for the hard work of the RetroPie team!
+The RetroEvolved Setup Script is a derivitave reworking of the "RetroPie" setup script (Found Here: https://github.com/RetroPie/RetroPie-Setup) with minor changes made to remove all non-commercial licensed code, trademarked images and provide a medium for developers and resellers to sell their hardware preinstalled with this code without fear of legal repercussion. All references to "RetroPie" have thus been replaced with "RetroEvolved" to distinguish this project from it's original source. This code is licensed under the same licenses as the original source "RetroPie" which is the GNU GPL version stated below in the License section. "RetroEvolved" was created to distinguish itself completely from RetroPie but in no way is attempting to take credit for the hard work of the RetroPie team!
 
 License
 -------------
