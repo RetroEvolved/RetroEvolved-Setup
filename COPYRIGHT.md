@@ -1,8 +1,8 @@
-The RetroEvolved Project
-Copyright (C) 2012-2017 by the following:
+The RetroEvolved Project is based off the RetroPie Project.
+The RetroPie Project is Copyright (C) 2012-2017 by the following:
 
-If you have contributed to this project then you deserve to be on this
-list. Contact us (see: AUTHORS) and we'll add you.
+(If you have contributed to the RetroPie project then you deserve to be on this
+list. Contact the RetroPie team (see: AUTHORS) and they will add you.
 
 * Florian Müller "petrockblog"
 * Jools Wills "joolswills"
@@ -25,4 +25,4 @@ list. Contact us (see: AUTHORS) and we'll add you.
 * "HerbFargus"
 * Stefan "gizmo98"
 
-For most recent list see also https://github.com/RetroEvolved/RetroEvolved-Setup/graphs/contributors
+For most recent list of contributors to the RetroPie project see also https://github.com/RetroPie/RetroPie-Setup/graphs/contributors
