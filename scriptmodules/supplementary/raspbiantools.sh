@@ -7,7 +7,6 @@
 #
 # See the LICENSE.md file at the top-level directory of this distribution and
 # at https://raw.githubusercontent.com/RetroEvolved/RetroEvolved-Setup/master/LICENSE.md
-#
 
 rp_module_id="raspbiantools"
 rp_module_desc="Raspbian related tools"
