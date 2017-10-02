@@ -22,7 +22,7 @@ To run the RetroEvolved Setup Script make sure that your APT repositories are up
 
 ```shell
 sudo apt-get update
-<!--sudo apt-get dist-upgrade (DO NOT UPGRADE TO RASPBIAN STRETCH AS IT IS NOT YET SUPPORTED)-->
+sudo apt-get dist-upgrade
 sudo apt-get install git
 ```
 
