@@ -32,7 +32,8 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
-    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-theme-$theme.git"
+    # BACKUP gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-theme-$theme.git"
+    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/RetroEvolved/es-theme-$theme.git"
 }
 
 function uninstall_theme_esthemes() {
