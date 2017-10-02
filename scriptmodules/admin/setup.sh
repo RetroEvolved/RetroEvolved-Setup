@@ -400,7 +400,7 @@ function update_packages_gui_setup() {
     fi
 
     local update_os=0
-    dialog --yesno "Would you like to update the underlying OS packages (eg kernel etc) ? NOTE as of 10/1/2017 Raspbian Stretch is not supported by RetroEvolved. It may be wise to hold off on updating these packages as it could brick your console! Please make a backup of your console before proceeding." 22 76 2>&1 >/dev/tty && update_os=1
+    dialog --yesno "Would you like to update the underlying O.S. packages (eg kernel etc) ?" 22 76 2>&1 >/dev/tty && update_os=1
 
     clear
 
