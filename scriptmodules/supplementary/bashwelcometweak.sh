@@ -16,7 +16,7 @@ rp_module_section="config"
 function install_bashwelcometweak() {
     remove_bashwelcometweak
     cat >> "$home/.bashrc" <<\_EOF_
-# RETROPIE PROFILE START
+# RETROEVOLVED PROFILE START
 
 function retroevolved_welcome() {
     local upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
@@ -71,17 +71,17 @@ function retroevolved_welcome() {
     local bfgwht="${bld}$(tput setaf 7)"
     
     local logo=(
-        "${fgred}________________________________________________"
-        "${fgred}\ ______   \_   _____\__    ___\______   \_____  \"
-        "${fgred}  |       _/|    __)_  |    |   |       _//   |   \"
-        "${fgred}  |    |   \|        \ |    |   |    |   /    |    \"
-        "${fgred}  |____|_  /_______  / |____|   |____|_  \_______  /"
-        "${bfgred}______________   ___________  .____ ____   _____________________"
-        "${bfgred}\_   _____\   \ /   \_____  \ |    |\   \ /   \_   _____\______ \"
-        "${bfgred} |    __)_ \   Y   / /   |   \|    | \   Y   / |    __)_ |    |  \"
-        "${bfgred} |        \ \     / /    |    |    |__\     /  |        \|    `   \"
-        "${bfgred}/_______  /  \___/  \_______  |_______ \___/  /_______  /_______  /"
-        "${bfgred}        \/                  \/        \/              \/        \/"
+        "${fgred} ________________________________________________"
+        "${fgred} \ ______   \_   _____\__    ___\______   \_____  \"
+        "${fgred}   |       _/|    __)_  |    |   |       _//   |   \"
+        "${bfgwht}  |    |   \|        \ |    |   |    |   /    |    \"
+        "${bfgwht}  |____|_  /_______  / |____|   |____|_  \_______  /"
+        "${bfgred} ______________   ___________  ____ ____   _____________________"
+        "${bfgred} \_   _____\   \ /   \_____  \ |    |\   \ /   \_   _____\______ \"
+        "${bfgred}  |    __)_ \   Y   / /   |   \|    | \   Y   / |    __)_ |    |  \"
+        "${fgred}   |        \ \     / /    |    |    |__\     /  |        \|    `   \"
+        "${fgred}  /_______  /  \___/  \_______  |_______ \___/  /_______  /_______  /${fgrst} "
+        "${fgred}          \/                  \/        \/              \/        \/ \`\"\"\"'${fgrst} "
         )
 
     local out
@@ -126,14 +126,14 @@ function retroevolved_welcome() {
 }
 
 retroevolved_welcome
-# RETROPIE PROFILE END
+# RETROEVOLVED PROFILE END
 _EOF_
 
 
 }
 
 function remove_bashwelcometweak() {
-    sed -i '/RETROPIE PROFILE START/,/RETROPIE PROFILE END/d' "$home/.bashrc"
+    sed -i '/RETROEVOLVED PROFILE START/,/RETROEVOLVED PROFILE END/d' "$home/.bashrc"
 }
 
 function gui_bashwelcometweak() {
