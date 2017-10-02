@@ -32,8 +32,8 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
-    # BACKUP gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-theme-$theme.git"
-    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/RetroEvolved/es-theme-$theme.git"
+    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-theme-$theme.git"
+    
 }
 
 function uninstall_theme_esthemes() {
@@ -45,6 +45,8 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
+        'RetroEvolved default'
+        'RetroEvolved ComicBook'
         'RetroPie carbon'
         'RetroPie carbon-centered'
         'RetroPie carbon-nometa'
