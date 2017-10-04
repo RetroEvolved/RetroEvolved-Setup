@@ -28,7 +28,7 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     if [[ -z "$theme" ]]; then
-        theme="crt"
+        theme="default"
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
@@ -45,7 +45,6 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
-        'RetroEvolved crt'
         'RetroEvolved ComicBook'
         'ruckage snes-mini'
         'RetroPie carbon'
