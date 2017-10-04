@@ -10,7 +10,7 @@
 #
 
 rp_module_id="esthemes"
-rp_module_desc="Install new Themes for Emulation Station"
+rp_module_desc="Install new Themes for Your System"
 rp_module_section="config"
 
 function depends_esthemes() {
@@ -28,7 +28,7 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     if [[ -z "$theme" ]]; then
-        theme="carbon"
+        theme="default"
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
