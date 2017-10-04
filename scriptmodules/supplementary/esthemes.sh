@@ -28,7 +28,7 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     if [[ -z "$theme" ]]; then
-        theme="default"
+        theme="nbba"
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
@@ -45,6 +45,7 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
+        'RetroEvolved nbba'
         'RetroEvolved ComicBook'
         'ruckage snes-mini'
         'RetroPie carbon'
@@ -54,7 +55,6 @@ function gui_esthemes() {
         'RetroPie simple-dark'
         'RetroPie clean-look'
         'RetroPie color-pi'
-        'RetroPie nbba'
         'RetroPie simplified-static-canela'
         'RetroPie turtle-pi'
         'RetroPie zoid'
