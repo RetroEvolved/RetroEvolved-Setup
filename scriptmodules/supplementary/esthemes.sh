@@ -47,6 +47,7 @@ function gui_esthemes() {
     local themes=(
         'RetroEvolved default'
         'RetroEvolved ComicBook'
+        'RetroEvolved snes-mini'
         'RetroPie carbon'
         'RetroPie carbon-centered'
         'RetroPie carbon-nometa'
