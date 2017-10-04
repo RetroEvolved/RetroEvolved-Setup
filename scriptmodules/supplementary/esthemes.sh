@@ -45,7 +45,7 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
-        'RetroEvolved default'
+        'RetroEvolved crt'
         'RetroEvolved ComicBook'
         'ruckage snes-mini'
         'RetroPie carbon'
