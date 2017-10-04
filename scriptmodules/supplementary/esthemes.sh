@@ -28,7 +28,7 @@ function install_theme_esthemes() {
         repo="RetroEvolved"
     fi
     if [[ -z "$theme" ]]; then
-        theme="default"
+        theme="crt"
         repo="RetroEvolved"
     fi
     mkdir -p "/etc/emulationstation/themes"
