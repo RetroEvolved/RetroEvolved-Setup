@@ -36,10 +36,11 @@ git clone --depth=1 https://github.com/RetroEvolved/RetroEvolved-Setup.git
 The script is executed with 
 
 ```shell
-chmod u+x **/*.sh
+chmod u+x -R **/*.sh
 cd RetroEvolved-Setup
 sudo ./retroevolved_setup.sh
 ```
+Note: The chmod line first gives us execute permissions on all of the .sh files in RetroEvolved as they do not come executable by default. If anyone knows a more efficient way to handle this, please recommend.
 
 When you first run the script it may install some additional packages that are needed.
 
