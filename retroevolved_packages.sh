@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-# This file is part of The RetroEvolved Project
+# This file is part of The RetroPie Project
 #
-# The RetroEvolved Project is a derivative reworking of The RetroPie Project. The RetroPie Project is the legal property of its developers, whose names are
+# The RetroEvolved Project is a derivative reworking of the RetroPie project which is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 # See the LICENSE.md file at the top-level directory of this distribution and
 # at https://raw.githubusercontent.com/RetroEvolved/RetroEvolved-Setup/master/LICENSE.md
 #
 
-__version="4.3"
+__version="4.3.1"
 
 [[ "$__debug" -eq 1 ]] && set -x
 
@@ -49,7 +49,7 @@ if [[ "$(id -u)" -ne 0 ]]; then
     exit 1
 fi
 
-__backtitle="RetroGame.club - RetroEvolved Setup. Installation folder: $rootdir for user $user"
+__backtitle="www.RetroGame.Club - RetroEvolved Setup. Installation folder: $rootdir for user $user"
 
 source "$scriptdir/scriptmodules/system.sh"
 source "$scriptdir/scriptmodules/helpers.sh"
