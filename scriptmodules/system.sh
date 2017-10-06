@@ -33,11 +33,11 @@ function setup_env() {
         set_default_gcc "$__default_gcc_version"
     fi
 
-    # set location of binary downloads to retropie.org
-    __binary_host="files.retropie.org.uk"
+    # set location of binary downloads
+    __binary_host="files.retroevolved.org.uk"
     [[ "$__has_binaries" -eq 1 ]] && __binary_url="https://$__binary_host/binaries/$__os_codename/$__platform"
 
-    __archive_url="https://files.retropie.org.uk/archives"
+    __archive_url="https://files.retroevolved.org.uk/archives"
 
     # -pipe is faster but will use more memory - so let's only add it if we have more thans 256M free ram.
     [[ $__memory_phys -ge 512 ]] && __default_cflags+=" -pipe"
@@ -157,6 +157,9 @@ function get_os_version() {
 
     # add 32bit/64bit to platform flags
     __platform_flags+=" $(getconf LONG_BIT)bit"
+
+    # configure Raspberry Pi graphics stack
+    isPlatform "rpi" && get_rpi_video
 }
 
 function get_default_gcc() {
@@ -209,6 +212,24 @@ function get_retroevolved_depends() {
     if ! getDepends "${depends[@]}"; then
         fatalError "Unable to install packages required by $0 - ${md_ret_errors[@]}"
     fi
+}
+
+function get_rpi_video() {
+    local pkgconfig="/opt/vc/lib/pkgconfig"
+
+    # detect driver via inserted module / platform driver setup
+    if [[ -d "/sys/module/vc4" ]]; then
+        __platform_flags+=" mesa kms"
+        [[ "$(ls -A /sys/bus/platform/drivers/vc4_firmware_kms/*.firmwarekms 2>/dev/null)" ]] && __platform_flags+=" dispmanx"
+    else
+        __platform_flags+=" videocore dispmanx"
+    fi
+
+    # use our supplied fallback pkgconfig if necessary
+    [[ ! -d "$pkgconfig" ]] && pkgconfig="$scriptdir/pkgconfig"
+
+    # set pkgconfig path for vendor libraries
+    export PKG_CONFIG_PATH="$pkgconfig"
 }
 
 function get_platform() {

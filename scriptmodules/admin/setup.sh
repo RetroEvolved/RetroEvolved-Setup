@@ -2,7 +2,7 @@
 
 # This file is part of The RetroEvolved Project
 #
-# The RetroEvolved Project is a derivative reworking of The RetroPie Project. The RetroPie Project is the legal property of its developers, whose names are
+# The RetroEvolved Project is a derivative reworking of The RetroEvolved Project. The RetroEvolved Project is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 # See the LICENSE.md file at the top-level directory of this distribution and
@@ -64,8 +64,9 @@ function depends_setup() {
         exec "$scriptdir/retroevolved_packages.sh" setup post_update gui_setup
     fi
 
-    if isPlatform "rpi" && [[ -f /boot/config.txt ]] && grep -q "^dtoverlay=vc4-kms-v3d" /boot/config.txt; then
-        printMsgs "dialog" "You have the experimental desktop GL driver enabled. This is NOT compatible with RetroEvolved, and Emulation Station as well as emulators will fail to launch. Please disable the experimental desktop GL driver from the raspi-config 'Advanced Options' menu."
+    if isPlatform "rpi" && isPlatform "mesa"; then
+        printMsgs "dialog" "ERROR: You have the experimental desktop GL driver enabled. This is NOT compatible with RetroEvolved, and Emulation Station as well as emulators will fail to launch.\n\nPlease disable the experimental desktop GL driver from the raspi-config 'Advanced Options' menu."
+        exit 1
     fi
 
     # make sure user has the correct group permissions
@@ -124,7 +125,7 @@ function post_update_setup() {
     } &> >(tee >(gzip --stdout >"$logfilename"))
     rps_printInfo "$logfilename"
 
-    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://RetroGame.Club/pages/RetroEvolved.\n\nThe pre-built RetroEvolved image does not contain any software with non commercial licences. Therefore selling RetroEvolved images or including RetroEvolved with your commercial product is allowed!\n\nNo copyrighted games are included with RetroEvolved.\n\nIf you have been sold this software by a source other than RetroGame.Club, please let us know about it so we can add it to our website as an official distributer by emailing Support@RetroGame.Club."
+    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://RetroGame.Club/pages/DIY-RetroEvolved \n\nThe pre-built RetroEvolved image named "RetroEvolved-Commercial" does not contain any software with non commercial licences. Therefore selling RetroEvolved-Commercial images or including RetroEvolved-Commercial with your commercial product is allowed! DO NOT include RetroEvolved-NonCommercial images in any commercial project, however, as they DO contain non-commercial licensed code! \n\nNo copyrighted games are included with ANY Offical RetroEvolved Image.\n\nIf you have been sold this software by a source other than RetroGame.Club, please let us know about it so we can add it to our website as an official distributer by emailing Support@RetroGame.Club."
 
     # return to set return function
     "${return_func[@]}"
@@ -400,7 +401,6 @@ function update_packages_gui_setup() {
     fi
 
     local update_os=0
-    dialog --yesno "Would you like to update the underlying O.S. packages (eg kernel etc) ?" 22 76 2>&1 >/dev/tty && update_os=1
 
     clear
 
@@ -491,15 +491,15 @@ function gui_setup() {
 
         cmd=(dialog --backtitle "$__backtitle" --title "RetroEvolved-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "Version: $__version\nLast Commit: $commit" 22 76 16)
         options=(
-            I "Basic install" "I This will install all packages from Core and Main which gives a basic RetroEvolved install. Further packages can then be installed later from the Optional and Experimental sections. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
+            I "Basic install" "I This will install all programs listed in Core and Main which will give you a basic RetroEvolved install. There are even more cool programs in the Optional and Experimental sections which may require advanced configuration to get running properly. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
 
-            U "Update all installed packages" "U Update all currently installed packages. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
+            U "Update" "U Updates RetroEvolved-Setup and all currently installed programs. Will also allow to update OS packages. If binaries are available they will be used, otherwise programs will be built from source."
 
-            P "Manage packages"
+            P "Manage programs"
             "P Install/Remove and Configure the various components of RetroEvolved, including emulators, ports, and controller drivers."
 
             C "Configuration / tools"
-            "C Configuration and Tools. Any packages you have installed that have additional configuration options will also appear here."
+            "C Configuration and Tools. Any programs you have installed that have additional configuration options will also appear here."
 
             S "Update RetroEvolved-Setup script"
             "S Update this RetroEvolved-Setup script. This will update this main management script only, but will not update any software packages. To update packages use the 'Update' option from the main menu, which will also update the RetroEvolved-Setup script."
@@ -565,7 +565,7 @@ function gui_setup() {
                 rps_printInfo "$logfilename"
                 ;;
             R)
-                dialog --defaultno --yesno "Are you sure you want to reboot?" 22 76 2>&1 >/dev/tty || continue
+                dialog --defaultno --yesno "Are you sure you want to reboot?\n\nNote that if you reboot when Emulation Station is running, you will lose any metadata changes." 22 76 2>&1 >/dev/tty || continue
                 reboot_setup
                 ;;
         esac

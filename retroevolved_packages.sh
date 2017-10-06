@@ -9,7 +9,7 @@
 # at https://raw.githubusercontent.com/RetroEvolved/RetroEvolved-Setup/master/LICENSE.md
 #
 
-__version="4.3"
+__version="4.3.1"
 
 [[ "$__debug" -eq 1 ]] && set -x
 
