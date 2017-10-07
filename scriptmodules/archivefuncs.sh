@@ -10,7 +10,7 @@
 #
 
 ## @file archivefuncs.sh
-## @brief RetroEvolved archivefuncs library
+## @brief RetroPie archivefuncs library
 ## @copyright GPLv3
 
 readonly arch_dir="/tmp/retroevolved-archive"
