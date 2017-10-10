@@ -47,6 +47,7 @@ function gui_esthemes() {
     local themes=(
         'RetroEvolved nbba'
         'RetroEvolved ComicBook'
+        'RetroEvolved SpaceOddity'
         'ruckage snes-mini'
         'RetroPie carbon'
         'RetroPie carbon-centered'
