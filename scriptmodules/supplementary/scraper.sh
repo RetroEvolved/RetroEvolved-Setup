@@ -82,6 +82,8 @@ function scrape_scraper() {
     params+=(-marquee_path "$img_path")
     params+=(-output_file "$gamelist")
     params+=(-rom_dir "$romdir/$system")
+    params+=(-ss_user "RetroGameClub")
+    params+=(-ss_password "RetroGamePass")
     params+=(-workers "4")
     params+=(-skip_check)
     if [[ "$use_thumbs" -eq 1 ]]; then
