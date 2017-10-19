@@ -125,7 +125,7 @@ function post_update_setup() {
     } &> >(tee >(gzip --stdout >"$logfilename"))
     rps_printInfo "$logfilename"
 
-    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://RetroGame.Club/pages/DIY-RetroEvolved \n\nThe pre-built RetroEvolved image named "RetroEvolved-Commercial" does not contain any software with non commercial licences. Therefore selling RetroEvolved-Commercial images or including RetroEvolved-Commercial with your commercial product is allowed! DO NOT include RetroEvolved-NonCommercial images in any commercial project, however, as they DO contain non-commercial licensed code! \n\nNo copyrighted games are included with ANY Offical RetroEvolved Image.\n\nIf you have been sold this software by a source other than RetroGame.Club, please let us know about it so we can add it to our website as an official distributer by emailing Support@RetroGame.Club."
+    printMsgs "dialog" "NOTICE: The RetroEvolved-Setup script and pre-made RetroEvolved SD card images are available to download for free from https://RetroGame.Club/pages/DIY-RetroEvolved \n\nThe pre-built RetroEvolved image named "RetroEvolved-Commercial" does not contain any software with non commercial licences. Therefore selling RetroEvolved-Commercial images or including RetroEvolved-Commercial with your commercial product is allowed! DO NOT include RetroEvolved-NonCommercial images in any commercial project, however, as they DO contain non-commercial licensed code! \n\nNo copyrighted games are included with ANY Offical RetroEvolved Image.\n\nIf you have been sold this software as a package including copyrighted games/ROMS, this is against the terms of use for RetroEvolved and was an illegal sale. Please contact Support@RetroGame.Club to report any violations of this policy!"
 
     # return to set return function
     "${return_func[@]}"
@@ -492,12 +492,12 @@ function gui_setup() {
 
         cmd=(dialog --backtitle "$__backtitle" --title "RetroEvolved-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "Version: $__version\nLast Commit: $commit" 22 76 16)
         options=(
-            I "Basic install" "I This will install all programs listed in Core and Main which will give you a basic RetroEvolved install. There are even more cool programs in the Optional and Experimental sections which may require advanced configuration to get running properly. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
+            I "Basic install" "I This will install all programs listed in Core and Main which will give you a basic RetroEvolved install. Do This First if you are beginning a fresh install! There are even more cool programs in the Optional and Experimental sections which may require advanced configuration to get running properly. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
 
             U "Update" "U Updates RetroEvolved-Setup and all currently installed programs. Will also allow to update OS packages. If binaries are available they will be used, otherwise programs will be built from source."
 
             P "Manage programs"
-            "P Install/Remove and Configure the various components of RetroEvolved, including emulators, ports, and controller drivers."
+            "P Install/Remove and Configure RetroEvolved software, emulators, ports, and controller drivers."
 
             C "Configuration / tools"
             "C Configuration and Tools. Any programs you have installed that have additional configuration options will also appear here."
