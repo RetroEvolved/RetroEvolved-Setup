@@ -48,6 +48,7 @@ function gui_esthemes() {
         'RetroEvolved nbba'
         'RetroEvolved ComicBook'
         'RetroEvolved SpaceOddity'
+		'RetroEvolved synthwave'
         'ruckage snes-mini'
         'RetroPie carbon'
         'RetroPie carbon-centered'
